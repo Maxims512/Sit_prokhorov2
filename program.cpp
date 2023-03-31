@@ -1,12 +1,19 @@
 #include <iostream>
 
-int f(int n)
-{
-    if(n < 2) return 0;
-    if(n == 2 || n == 3) return 1;
-    return f(n-1)+f(n-2);
-}
+#include <iostream>
+using namespace std;
 
-int main(){
-    std::cout<<f(10);
+int main()
+{ 
+    int a1=0, a2=1, a, n;
+    n=10;
+    cout<<a1<<endl<<a2<<endl;
+    for(int i=3; i<=n; i++)
+    { 
+        a=a1+a2;
+        cout<<a<<endl;
+        a1=a2;
+        a2=a; 
+    }
+    return 0;
 }
